@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odds Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Percentage to Odds</h1>
+    
+    <div class="toggle-section">
+      <label class="switch">
+        <input type="checkbox" id="enabledToggle" checked>
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label">Enable Conversion</span>
+    </div>
+
+    <div class="format-section">
+      <label for="oddsFormat">Odds Format:</label>
+      <select id="oddsFormat">
+        <option value="american">American (+150, -200)</option>
+        <option value="european">European (2.50, 1.50)</option>
+      </select>
+    </div>
+
+    <div class="info-section">
+      <p class="info-text">This extension automatically converts percentages to sportsbook odds on web pages.</p>
+      <p class="example-text">Example: 50% → <span id="exampleOdds">+100</span></p>
+    </div>
+
+    <button id="refreshBtn" class="refresh-btn">Refresh Page</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+
